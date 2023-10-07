@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="{% static 'vendor/bootstrap/bootstrap.css' %}"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav id="myNav" class="navbar fixed-top navbar-expand-lg navbar-dark">
+      <div class="container-fluid">
+        <img style="height: 30px" src="{% static 'img/logo.png' %}" alt="" />
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul
+          style="margin-right: 10px; margin-left: 10px"
+          class="navbar-nav ml-auto"
+        >
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div id="bg" class="p-5 mb-4 bg-body-tertiary">
+      <div
+        class="container-fluid text-center text-white"
+        style="margin-top: 50px"
+      >
+        <h1 class="display-5 fw-bold">{{title}}</h1>
+        <p class="fs-4">{{subtitle}}</p>
+      </div>
+    </div>
+
+    <div id="myBody" class="container-fluid" style="width: 80%">
+      <div
+        class="container bg-white text-dark shadow"
+        style="margin-top: -120px"
+      >
+        <div class="row" style="height: 300px">
+          <h1>Content 1</h1>
+        </div>
+      </div>
+      <div class="container bg-dark text-white shadow">
+        <div class="row" style="height: 300px">
+          <h1>Content 2</h1>
+        </div>
+      </div>
+      <div class="container bg-warning text-white shadow">
+        <div class="row" style="height: 300px">
+          <h1>Content 3</h1>
+        </div>
+      </div>
+      <div class="container bg-secondary text-white shadow">
+        <div class="row" style="height: 300px">
+          <h1>Content 4</h1>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'vendor/jquery/jquery.js' %}"></script>
+    <script src="{% static 'vendor/jquery/jquery2.js' %}"></script>
+    <script src="{% static 'vendor/popper/popper.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/bootstrap.js' %}"></script>
+    <script src="{% static 'js/scrolling.js' %}"></script>
+  </body>
+</html>
